@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'dev.asdf00'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // https://mvnrepository.com/artifact/party.iroiro.luajava/luajava
+    implementation 'party.iroiro.luajava:luajava:3.5.0'
+    // https://mvnrepository.com/artifact/party.iroiro.luajava/lua54
+    implementation 'party.iroiro.luajava:lua54:3.5.0'
+    // https://mvnrepository.com/artifact/party.iroiro.luajava/lua54-platform
+    runtimeOnly 'party.iroiro.luajava:lua54-platform:3.5.0'
+}
+
+test {
+    useJUnitPlatform()
+}
